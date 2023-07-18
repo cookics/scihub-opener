@@ -6,6 +6,12 @@
     "default_icon": "sci-hub.png",
     "default_title": "SciHub"
   },
+  "content_scripts": [
+    {
+      //"matches": ["http://*/*", "https://*/*"], // Specify the URLs where the script should run
+      "js": ["script.js"] // Add the JavaScript file name
+    }
+  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -23,6 +29,7 @@
   },
   "permissions": [
     "tabs",
+    "activeTab",
     "storage"
   ]
 }
